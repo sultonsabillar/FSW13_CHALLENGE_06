@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <%- include('../head.ejs') %>
+    <title>Players | All</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h3>Game Players</h3>
+      <div class="alert alert-info" role="alert">
+        <p>
+          <strong>READ</strong> operation - Table <samp>user_game</samp> joining
+          <samp>user_game_biodata</samp> and <samp>user_game_history</samp>.
+          <br />
+          Click <strong>CREATE NEW USER</strong> to add a new user.
+          Click <strong>UPDATE</strong> to update user info. Click <strong>DELETE</strong> to delete user.
+        </p>
+      </div>
+      <a href="/dashboard/create">
+        <button class="btn btn-primary">CREATE NEW USER</button>
+      </a>
+      <table class="table mt-5">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(user => { %>
+          <tr>
+            <td><%= user.username %></td>
+            <td><%= user.UserBio.firstname %></td>
+            <td><%= user.UserBio.lastname %></td>
+            <td><%= user.email %></td>
+            <td>********</td>
+            <td class="row">
+              <a href="/dashboard/users/<%= user.id %>">
+                <button class="btn btn-outline-info">Detail</button>
+              </a>
+              <a href="/dashboard/users/update/<%= user.id %>">
+                <button class="btn btn-outline-success">Update</button>
+              </a>
+              <!-- <form method="POST" action="/dashboard/users/<%= user.id %>?_method=PUT">
+                <button class="btn btn-outline-success">Update</button>
+              </form> -->
+              <form method="POST" action="/dashboard/users/<%= user.id %>?_method=DELETE">
+                <button class="btn btn-outline-danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
