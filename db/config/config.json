@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "sultonsabillar",
+    "password": "passwordpalingsusah",
+    "database": "sultonDB",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "sultonsabillar",
+    "password": "passwordpalingsusah",
+    "database": "sultonDB_test",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "sultonsabillar",
+    "password": "passwordpalingsusah",
+    "database": "sultonDB_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
