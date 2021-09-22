@@ -1,0 +1,241 @@
+/* =================================== DESKTOP VERSION ============================================= */
+* {
+  background-color: #AE876B;
+  max-width: 100%;
+  font-family: sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+
+header a {
+  margin: 5px;
+  padding: 10px;
+  font-size: 60px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #864313;
+}
+
+header img {
+  margin: 10px;
+  transform: scale(0.8);
+}
+
+header h1 {
+  padding: 10px;
+  color: orange;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 12em 20em 5em;
+  grid-template-areas: 
+        ". player1 .       computer  ."
+        ". player1 versus  computer  ."
+        ". player1 refresh computer  .";
+}
+
+main img {
+  padding: 15px;
+}
+
+#player1 {
+  grid-area: player1;
+  text-align: center;
+}
+
+#player1 div {
+  display:inline-block;
+  width: 12rem;
+  border-radius: 20px;
+}
+
+#player1 input {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 80%;
+  transform: scale(0.8);
+}
+
+#versus {
+  grid-area: versus;
+  text-align: center;
+}
+
+.versus {
+  color: darkred;
+  font-size: 80px;
+  font-weight: 1000;
+  margin-top: 20%;
+}
+
+.win-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16rem;
+  height: 9rem;
+  background-color: darkgreen;
+  color: white;
+  font-size: 48px;
+  font-weight: 800;
+  margin: 10% auto;
+  border-radius: 8px;
+  transform: rotate(-25deg);
+}
+
+#computer {
+  grid-area: computer;
+  text-align: center;
+}
+
+#computer div {
+  display:inline-block;
+  width: 12rem;
+  border-radius: 20px;
+}
+
+#computer img {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  width: 80%;
+  transform: scale(0.8);
+}
+
+#refresh-button {
+  /* background-color: inherit; */
+  background: url();
+  grid-area: refresh;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* =================================== MOBILE VERSION ============================================= */
+@media (max-width: 992px) {
+  html, body {
+    background-color: #AE876B;
+    font-family: sans-serif;
+    font-size: 12;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  header a {
+    margin: 2px;
+    padding: 5px;
+    font-size: 50px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #864313;
+  }
+
+  header img {
+    margin: 0px;
+    transform: scale(0.7);
+  }
+
+  header h1 {
+    padding: 5px;
+    color: orange;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5em 10em 15em 2em;
+    grid-template-areas:
+          ".       .       ." 
+          "player1 .       computer"
+          ".       versus  ."
+          ".       refresh .";
+  }
+
+  #player1 {
+    grid-area: player1;
+    text-align: center;
+  }
+
+  #player1 div {
+    display: inline-block;
+    width: 6rem;
+    border-radius: 15px;
+  }
+
+  #player1 input {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width: 100%;
+    transform: scale(0.6);
+  }
+
+  #versus {
+    grid-area: versus;
+    text-align: center;
+  }
+
+  .versus {
+    color: darkred;
+    font-size: 40px;
+    font-weight: 1000;
+    margin-top: 20%;
+  }
+
+  .win-status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 6rem;
+    background-color: darkgreen;
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 10% auto;
+    border-radius: 8px;
+    transform: rotate(-25deg);
+  }
+
+  #computer {
+    grid-area: computer;
+    text-align: center;
+  }
+
+  #computer div {
+    display:inline-block;
+    width: 6rem;
+    border-radius: 15px;
+  }
+
+  #computer img {
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width: 100%;
+    transform: scale(0.6);
+  }
+
+  #refresh-button {
+    background-color: inherit;
+    background: url();
+    grid-area: refresh;
+    margin-left: auto;
+    margin-right: auto;
+    transform: scale(0.8);
+  }
+}

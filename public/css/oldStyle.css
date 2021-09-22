@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* =================================== MOBILE VERSION ============================================= */
+
+html, body {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.navbar {
+  font-family: 'Open Sans', sans-serif;
+  background: black;
+  z-index: 100;
+}
+
+.main {
+  background-image: url('../img/page/bg1.png');
+  grid-area: main;
+}
+
+.jumbotron {
+  background-image: inherit;
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+} 
+
+/* =================================== DESKTOP VERSION ============================================= */
+
+@media (min-width: 992px) {
+  html, body {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 80px;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  h4{
+    color: orange;
+    font-weight: bold;
+  }
+
+  .navbar {
+    font-family: 'Open Sans', sans-serif;
+    background: inherit;
+    z-index: 100;
+  }
+
+  .jumbotron {
+    background-image: inherit;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 1;
+  } 
+
+  .date {
+    font-size: smaller;
+  }
+
+  .btn-warning {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 55px;
+  }
+
+  #SignUpModal, #LoginModal {
+    color: black;
+  }
+
+  .bg-nav {
+    background: rgba(0, 0, 0, 0.5);
+    height: 90px;
+  }
+
+  .bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6 {
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+  }
+
+  main {
+    background-image: url('../img/page/bg1.png');
+    background-repeat: no-repeat;
+    background-attachment: static;
+    background-size: cover;
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  #home h1 {
+    padding-top: 15%;
+    padding-bottom: 50px;
+  }
+
+  #home h3 {
+    padding-bottom: 50px;
+  }
+
+  .about {
+    background-image: radial-gradient(transparent, black), url('../img/page/bg2.png');
+    grid-area: about;
+  }
+
+  .about .about-title{
+    position: relative;
+    padding-top: 17%; 
+    padding-left: 12%;
+  }
+
+  .about .slider{
+    position: relative;
+    width: 200%;
+    padding-top: 20%; 
+    padding-right: 8%;
+  }
+
+  .features {
+    background-image: radial-gradient(transparent, black), url('../img/page/bg3.png');
+    grid-area: features;
+  }
+
+  .features #features-content {
+    padding-top: 20%;
+    padding-left: 30%;
+    width: 1441.55px;
+    height: 650px;
+    display: block;
+  }
+  .requirements {
+    background-image: radial-gradient(transparent, black), url('../img/page/bg4.png');
+    grid-area: requirements;
+  }
+
+  .requirements .row {
+    position: relative;
+    padding-top: 10%;
+    padding-left: 10%;
+  }
+
+  .table {
+    width: 35%;
+    margin-left: 10%;
+    color: white;
+  }
+
+  table, th, td {
+    border: 0.02px solid white;
+  }
+
+  .quotes {
+    background-image: url('../img/page/bg5.png');
+    grid-area: quotes;
+  }
+
+  #quotes {
+    display: grid;
+    grid-template-columns: .45fr .75fr .5fr .2fr 1fr;
+    grid-template-rows: .5fr repeat(3,1fr) .5fr;
+    grid-template-areas:
+      ". .         . .          ." 
+      ". .         . .          content-2"
+      ". content-1 . content-3  content-3"
+      ". .         . .          content-4"
+      ". .         . .          .";
+  }
+
+  .content-1 {
+    grid-area: content-1;
+  }
+
+  .content-2 {
+    grid-area: content-2;
+  }
+
+  .content-2 h3 {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .content-3 {
+    grid-area: content-3;
+  }
+
+  .content-3 h3 {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .content-4 {
+    grid-area: content-4;
+  }
+
+  .content-4 h3 {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  #quotes img {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .bg-dark {
+    width: 430px;
+    height: 150px;
+    padding: 10px 10px;
+    border-radius: 8px;
+  }
+
+  .bg-darkcc {
+    height: 130px;
+  }
+
+  .quotes .fa-twitter {
+    font-size: small;
+    color: white;
+  }
+
+  .subscribe {
+    background-color: black;
+    grid-area: subscribe;
+  }
+
+  .subscribe #subscribe-content {
+    padding-top: 25%;
+    padding-left: 20%;
+    width: 1441.55px;
+    height: 650px;
+    display: block;
+  }
+
+  .subscribe img {
+    padding-top: 30%;
+    padding-left: 200px;
+  }
+
+  hr {
+    display: block; 
+    border-top: 1px solid #ccc;
+  }
+
+  footer li {
+    font-weight: bold;
+  }
+
+  .subscribe .shortcut {
+    padding-left: 400px;
+    padding-bottom: 5px;
+  }
+
+  .subscribe .shortcut li {
+    padding-left: 20px;
+  }
+
+  .fa-facebook, .fa-twitter, .fa-youtube-play, .fa-twitch {
+    font-size: x-large;
+    color: white;
+    padding-left:  20px;
+    padding-right: 20px;
+  }
+
+  .fa-facebook:hover {
+    color: #3b5998;
+  }
+
+  .fa-twitter:hover {
+    color: turquoise;
+  }
+
+  .fa-youtube-play:hover {
+    color: red;
+  }
+  .fa-twitch:hover {
+    color: #6441a5;
+  }
+
+  ::placeholder {
+    color: red;
+    opacity: 1;
+  }  
+}
